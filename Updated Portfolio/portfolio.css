@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Sun center of solary system*/
+.sun{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    right: auto;
+    left: auto;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 
+    inset  0 0 14px 0px white,
+    inset 0px 0px 60px 0 darkgoldenrod,
+    inset 0px 0px 70px 0 orange,
+    inset 0px 0px 100px 0 orangered,
+    inset 0px 0px 100px 0 red,
+    inset 0px 0px 120px 0 darkred,
+    0 0 200px 40px darkgoldenrod ;
+}
+/*Planets*/
+.mercury{
+    background-image: url('mercury.jpg');
+    position: relative;
+    width: 5px;
+    height: 5px;
+    right: 30px;
+    top: 100px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.venus{
+    background-image: url('venus.jpg');
+    position: relative;
+    width: 10px;
+    height: 10px;
+    right: 60px;
+    top: 92px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.earth{
+    background-image: url('earth.jpeg');
+    position: relative;
+    width: 10px;
+    height: 10px;
+    right: 90px;
+    top: 82px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.mars{
+    background-image: url('mars.jpg');
+    position: relative;
+    width: 9px;
+    height: 9px;
+    right: 130px;
+    top: 72px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.jupiter{
+    background-image: url('jupiter.webp');
+    position: relative;
+    width: 150px;
+    height: 150px;
+    right: 325px;
+    top: 0px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.saturn{
+    background-image: url('saturn.jpeg');
+    position: relative;
+    width: 150px;
+    height: 150px;
+    right: 575px;
+    top: -140px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.ring{
+    width: 305px;
+    height: 305px;
+    border: solid 50px #b8b08d;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    right: -75px;
+    top: -76px;     
+    transform: rotate3d(1,0,0,65deg);
+}
+.planet{
+    background-image: url('saturn.jpeg');
+    position: relative;
+    width: 150px;
+    height: 150px;
+    right: 575px;
+    top: -140px;
+    overflow: hidden;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+.planet:before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+    top: 100px;
+    background-color: #f29559;
+  left:30px;
+  box-shadow: 60px 0 #f29559, -75px 25px #cc5803, 45px 25px #cc5803,-20px 25px #f29559, 0 50px #f29559,60px 50px #f29559, -40px 75px #cc5803,80px 75px #cc5803, 30px 75px #f29559;
+}
+
+
+
+@keyframes move-twink-back {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 0}
+}
+
+@keyframes move-clouds-back {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px}
+}
+/*Twinkling stars background*/
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+.stars {
+    background: #000 url(stars.png) repeat top center;
+    z-index: 0;
+}
+
+.twinkling{
+    background: transparent url(twinkling.png) repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+
+
+
